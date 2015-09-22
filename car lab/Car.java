@@ -1,48 +1,60 @@
 
 
 /**
- * A car has a certain fuel efficancy and a certain amount of fule in the gas tank.
- *  The car may be driven which reduces the amount of gas in the fuel tank.
- * 
- * @author Bobby Brumfield 
- * @version 10 September 2015
- */
+* A simple car. It has fuel efficiency and a gas tank. 
+* It may be 'driven' which depletes the gas in the tank.
+* Unfortunatly, it doesn't actually go anywhere, so your gas is wasted.
+* 
+* @author Tyler Henning 
+* @version 9/10/15
+*/
 public class Car
 {
-    /** The fuel efficiency for the car measured in units of miles / gallon (mpg) */
-    private double fuelEfficiency;
-    
-    /** the amount of fuel in the tank of the car measured in units of gallons */
-    privet double fuelInTank;
-    
-
-    /**
-     *Constructor of class Car that specifies the fuel efficiency
-     */
-    public Car(double efficiency )
-    {
-        fuelEfficiency = efficiency;
-        fuelInTank = 0;
-    }
-
-    /**
-     * This method simulates driving the car for the specified distance and
-     * reduces the fuel in the tank
-     *
-     * @pre        the specified distance will not consume more than the available gas
-     *            
-     * @param   distance    the specified distance to drive in units of miles
-     */
-    public void drive( double distance )
-    {
-       
-    }
-    @Test
-    public void testDrive()
-    {
-        Car car = new Car ( 50.0 );
-        car.addGas( 10.0 );
-               
-    }
-
+/** The fuel efficiency of the gar in mpg */
+private double fuelEfficiency;
+/** The amount of fuel in the tank measured in gallons.*/
+private double gasInTank;
+/**
+* Constructor for objects of class Car that specifies fuel efficiencey.
+*/
+public Car(double fuelEfficiency2)
+{
+fuelEfficiency = fuelEfficiency2;
+gasInTank = 0;
 }
+
+/**
+* This simulates driving the car for a specified distance and reduces gas in tank.
+*
+* @pre The specified distance will not consume more than the avaliable gas.
+* 
+* @param distance the distance the car will drive in miles.
+*/
+public void drive(double distance)
+{
+gasInTank-=distance/fuelEfficiency;
+}
+
+/**
+* Returns the amount of gas in the tank in gallons
+*
+* @return Returns amount of gas in the tank in gallons
+*/
+public double getGasInTank()
+{
+return gasInTank;
+}
+
+/**
+* Add more gas to the tank
+* 
+* @pre Must be +
+* 
+* @param fill Amount of gas to add to the tank
+*/
+public void addGas(double fill)
+{
+gasInTank+=fill; 
+}
+}
+

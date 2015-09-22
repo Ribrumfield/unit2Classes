@@ -33,15 +33,10 @@ public class vendingmachine
         //When a token has been put in and the can is dispensed 
         cans = cans - 1;
     }
-    public void replaceCans()
+    public void replaceCans(int refill)
     {
        //When cans are placed back in the machine
-       
-    }
-    public void refundTokens()
-    {
-      //When more tokens are put in then cans are taken out
-      
+       cans= cans + refill;
     }
     /**
      * An example of a method - replace this comment with your own
@@ -54,9 +49,13 @@ public class vendingmachine
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public int sampleMethod(int y)
+    public int getcans()
     {
         // put your code here
         return cans;
+    }
+    public int gettokens()
+    {
+        return tokens;
     }
 }
