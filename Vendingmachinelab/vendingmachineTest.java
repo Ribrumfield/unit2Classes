@@ -48,9 +48,14 @@ public class vendingmachineTest
     @Test
     public void testReplaceCans()
     {
-      vendingmachine machine=new vendingmachine(0,0);
+      vendingmachine machine=new vendingmachine();
       machine.replaceCans(5);   
       assertEquals(5,machine.getcans());
+    }
+    @Test
+    public void testgivecan()
+    {
+          
     }
 
 }
