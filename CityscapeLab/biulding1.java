@@ -1,40 +1,28 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import javax.swing.JComponent;
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 
-
-/**
- * Write a description of class biulding1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class biulding1
+public class biulding1 
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-
-    /**
-     * Default constructor for objects of class biulding1
-     */
-    public biulding1()
+    private int xLeft;
+    private int yTop;
+    public void Biulding(int x, int y)
     {
-        // initialise instance variables
-        x = 0;
+        xLeft = x;
+        yTop = y;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
+    
+    public void draw(Graphics2D g2)
     {
-        // put your code here
-        return x+y;
+       Rectangle tower = new Rectangle(xLeft, yTop +10,60,10);
+       
+       
+       g2.draw (tower);
+       
     }
-
 }
