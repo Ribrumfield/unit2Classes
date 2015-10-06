@@ -3,6 +3,16 @@ import java.awt.Graphics2D;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.applet.Applet;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.GradientPaint;
+import java.awt.RenderingHints;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
@@ -15,8 +25,9 @@ public class CityscapeComponent extends JPanel
     // define the objects in your Cityscape as instance variables
     public CityscapeComponent() 
     { 
-        Color lightblue = new Color(110,193,255);
-        setBackground(lightblue); 
+        GradientPaint bluetoyellow = new GradientPaint(0,0,Color.BLUE,100,0,Color.YELLOW);
+        //Color lightblue = new Color(110,193,255);
+        setBackground(bluetoyellow); 
     } 
    
     
@@ -36,10 +47,11 @@ public class CityscapeComponent extends JPanel
         
         Graphics2D g2 = (Graphics2D) g;
         Building1 building1 = new Building1(10,60);
-        building1.draw(g2);
+        moon Moon = new moon(20,10);
         
         // invoke the draw method on each object in your Cityscape
-        // ...
+        building1.draw(g2);
+        Moon.draw(g2);
         
         
     }

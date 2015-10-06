@@ -20,8 +20,13 @@ public class Building1
     public void draw(Graphics2D g2)
     {
        Rectangle tower = new Rectangle(xLeft, yTop +10,100,450);
-       Rectangle door = new Rectangle (xLeft, yTop +10,30,50);
-       g2.draw (tower);
+       Rectangle window1 = new Rectangle (xLeft + 10, yTop +280,30,50);
+       Rectangle window2 = new Rectangle (xLeft + 60, yTop +280,30,50);
+       Rectangle window3 = new Rectangle (xLeft + 10, yTop +280,30,50);
+       Rectangle window4 = new Rectangle (xLeft + 60, yTop +280,30,50);       
        
+       g2.draw (tower);
+       g2.draw (window1);
+       g2.draw (window2);
     }
 }
