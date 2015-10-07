@@ -7,11 +7,11 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 
-public class Building1 
+public class Building2 
 {
     private int xLeft;
     private int yTop;
-    public Building1(int x, int y)
+    public Building2(int x, int y)
     {
         xLeft = x;
         yTop = y;

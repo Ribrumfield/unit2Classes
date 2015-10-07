@@ -20,8 +20,22 @@ public class moon
     public void draw(Graphics2D g2)
     {
         Ellipse2D.Double MOON
-               = new Ellipse2D.Double(xLeft + 10 , yTop + 30, 40,40);
+               = new Ellipse2D.Double(xLeft + 10 , yTop + 15, 90,90);
+        g2.setPaint(Color.white);
+
+        g2.draw(MOON);
+        g2.fill(MOON);
         
-        g2.draw (MOON);
+         Ellipse2D.Double CRATER1
+               = new Ellipse2D.Double(xLeft + 50,yTop +20, 20,20);
+        Ellipse2D.Double CRATER2
+               = new Ellipse2D.Double(xLeft + 60,yTop +56, 30,20);
+        Ellipse2D.Double CRATER3
+               = new Ellipse2D.Double(xLeft + 13,yTop +50, 20,20);       
+   
+        g2.setPaint(Color.black);
+        g2.draw(CRATER1);
+        g2.draw(CRATER2);
+        g2.draw(CRATER3);
     }
 }

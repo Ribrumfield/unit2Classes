@@ -27,15 +27,10 @@ public class CityscapeComponent extends JPanel
     { 
         GradientPaint bluetoyellow = new GradientPaint(0,0,Color.BLUE,100,0,Color.YELLOW);
         //Color lightblue = new Color(110,193,255);
-        setBackground(bluetoyellow); 
+        
     } 
-   
-    
-   
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
-
-    
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
      * It does not need to be invoked explicitly.
@@ -44,6 +39,15 @@ public class CityscapeComponent extends JPanel
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        int w = getWidth();
+        int h = getHeight();
+        Color color1 = Color.BLUE;
+        Color color2 = Color.YELLOW;
+        GradientPaint gp = new GradientPaint(0, 0, color1, 0, h, color2);
+        g2d.setPaint(gp);
+        g2d.fillRect(0, 0, w, h);
         
         Graphics2D g2 = (Graphics2D) g;
         Building1 building1 = new Building1(10,60);
