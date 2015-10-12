@@ -51,11 +51,18 @@ public class CityscapeComponent extends JPanel
         
         Graphics2D g2 = (Graphics2D) g;
         Building1 building1 = new Building1(10,60);
+        Building2 building2 = new Building2(10,60);
+        Building3 building3 = new Building3(10,60);
+        detail Detail = new detail(10,60);
         moon Moon = new moon(20,10);
         
         // invoke the draw method on each object in your Cityscape
         building1.draw(g2);
+        building2.draw(g2);
+        building3.draw(g2);
+        Detail.draw(g2);
         Moon.draw(g2);
+        
         
         
     }
